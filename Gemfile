@@ -8,7 +8,11 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'haml-rails'
-gem 'pg'
+
+gem 'curb', '~> 0.8.5'
+gem 'carrierwave', '~> 0.9.0'
+gem 'fog', '~> 1.20.0'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
