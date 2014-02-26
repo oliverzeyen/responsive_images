@@ -12,8 +12,11 @@ gem 'haml-rails'
 gem 'curb', '~> 0.8.5'
 gem 'carrierwave', '~> 0.9.0'
 gem 'fog', '~> 1.20.0'
+gem 'mini_magick', '~> 3.7.0'
+gem 'active_device', '~> 1.2.0'
 
 group :development do
+  gem 'pry-remote'
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'foreman'
