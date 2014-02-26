@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 class ResponsiveImageUploader < CarrierWave::Uploader::Base
+  include CarrierWave::MiniMagick
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -47,5 +48,17 @@ class ResponsiveImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+
+  version :mobile do
+    process :resize_to_fill => [300,300]
+  end
+
+    version :tablet do
+    process :resize_to_fill => [600,600]
+  end
+
+    version :desktop do
+    process :resize_to_fill => [600,600]
+  end
 
 end
